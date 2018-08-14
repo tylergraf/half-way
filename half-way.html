@@ -1,0 +1,39 @@
+<script>
+  import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+</script>
+
+<dom-module id="half-way">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+
+    /**
+     * `half-way`
+     *
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class HalfWay extends PolymerElement {
+      static get is() { return 'half-way'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'half-way'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(HalfWay.is, HalfWay);
+  </script>
+</dom-module>
